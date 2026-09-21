@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/_spa/favicon.ico" />
-    <link rel="shortcut icon" href="/_spa/favicon-32x32.ico" />
+    <link rel="icon" href="/manus-storage/mgebs-ai-logo-256_21a62e08.webp" />
+    <link rel="shortcut icon" href="/manus-storage/mgebs-ai-logo-256_21a62e08.webp" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <!--SEO_META-->
     <style>
@@ -52,6 +52,36 @@
       }
       html[data-theme='dark'] #loading-brand {
         color: #f0f0f0;
+      }
+      #loading-brand { flex-direction: column; }
+      #loading-brand img { width: 72px; height: 72px; object-fit: contain; border-radius: 22px; }
+      #loading-brand span { font: 700 18px/1.2 system-ui, sans-serif; letter-spacing: -0.02em; }
+      #mgebs-theme-toggle {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+        z-index: 100000;
+        width: 40px;
+        height: 40px;
+        border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+        border-radius: 999px;
+        color: currentColor;
+        background: color-mix(in srgb, Canvas 82%, transparent);
+        box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+        cursor: pointer;
+        backdrop-filter: blur(12px);
+        transition: transform 180ms cubic-bezier(.23,1,.32,1), background 180ms ease;
+      }
+      #mgebs-theme-toggle:hover { transform: translateY(-1px) scale(1.04); }
+      #mgebs-theme-toggle:active { transform: scale(.96); }
+      #mgebs-theme-toggle .mgebs-theme-icon { display: block; font-size: 18px; line-height: 1; transition: transform 260ms cubic-bezier(.23,1,.32,1); }
+      #mgebs-theme-toggle.is-switching .mgebs-theme-icon { transform: rotate(180deg) scale(1.12); }
+      ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 420ms; }
+      ::view-transition-new(root) { animation: mgebs-theme-reveal 420ms cubic-bezier(.23,1,.32,1); }
+      @keyframes mgebs-theme-reveal { from { clip-path: circle(0 at var(--mgebs-theme-x) var(--mgebs-theme-y)); } to { clip-path: circle(150vmax at var(--mgebs-theme-x) var(--mgebs-theme-y)); } }
+      @media (max-width: 640px) { #mgebs-theme-toggle { top: 10px; right: 10px; width: 36px; height: 36px; } }
+      html, body, button, a, input, textarea, select, [role='button'] {
+        cursor: url('/manus-storage/Screenshot2026-09-21024055_449e8233.png') 5 5, auto;
       }
     </style>
     <script>
@@ -126,6 +156,88 @@
     </script>
     <script>
       window.__SERVER_CONFIG__ = undefined; /* SERVER_CONFIG */
+    </script>
+    <script>
+      (function () {
+        var logo = '/manus-storage/mgebs-ai-logo-256_21a62e08.webp';
+        var brand = 'Mgebs ai';
+        var aiBrand = 'Mgebs AI';
+        document.title = brand;
+        function applyBranding() {
+          var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+          var node;
+          while ((node = walker.nextNode())) {
+            if (!node.parentElement || /^(SCRIPT|STYLE)$/.test(node.parentElement.tagName)) continue;
+            var next = node.nodeValue.replace(/LobeHub/g, brand).replace(/Lobe AI/g, aiBrand);
+            if (next !== node.nodeValue) node.nodeValue = next;
+          }
+          document.querySelectorAll('[title],[aria-label],[alt]').forEach(function (el) {
+            ['title', 'aria-label', 'alt'].forEach(function (attr) {
+              var value = el.getAttribute(attr);
+              if (value) {
+                var nextValue = value.replace(/LobeHub/g, brand).replace(/Lobe AI/g, aiBrand);
+                if (nextValue !== value) el.setAttribute(attr, nextValue);
+              }
+            });
+          });
+          document.querySelectorAll('img').forEach(function (img) {
+            var src = img.getAttribute('src') || '';
+            var alt = img.getAttribute('alt') || '';
+            if (/app-icons|avatars\/lobe-ai|LobeHub|Lobe AI/i.test(src + ' ' + alt) && src !== logo) img.setAttribute('src', logo);
+          });
+          document.querySelectorAll('svg[viewBox="0 0 940 320"]').forEach(function (svg) {
+            if (svg.dataset.mgebsLogo) return;
+            var image = document.createElement('img');
+            image.src = logo;
+            image.alt = brand;
+            image.dataset.mgebsLogo = 'true';
+            image.style.width = '28px';
+            image.style.height = '28px';
+            image.style.objectFit = 'contain';
+            image.style.borderRadius = '8px';
+            svg.replaceWith(image);
+          });
+          var loading = document.getElementById('loading-brand');
+          if (loading && !loading.dataset.mgebsReady) {
+            loading.dataset.mgebsReady = 'true';
+            loading.innerHTML = '<img src="' + logo + '" alt="' + brand + '"><span>' + brand + '</span>';
+          }
+        }
+        function currentTheme() { return document.documentElement.getAttribute('data-theme') || 'light'; }
+        function applyTheme(theme) {
+          localStorage.setItem('theme', theme);
+          document.documentElement.setAttribute('data-theme', theme);
+          var button = document.getElementById('mgebs-theme-toggle');
+          if (button) {
+            button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+            button.querySelector('.mgebs-theme-icon').textContent = theme === 'dark' ? '☀' : '☾';
+          }
+        }
+        function ensureThemeButton() {
+          if (document.getElementById('mgebs-theme-toggle')) return;
+          var button = document.createElement('button');
+          button.id = 'mgebs-theme-toggle';
+          button.type = 'button';
+          button.innerHTML = '<span class="mgebs-theme-icon" aria-hidden="true"></span>';
+          button.addEventListener('click', function (event) {
+            var next = currentTheme() === 'dark' ? 'light' : 'dark';
+            var x = event.clientX || window.innerWidth - 36;
+            var y = event.clientY || 36;
+            document.documentElement.style.setProperty('--mgebs-theme-x', x + 'px');
+            document.documentElement.style.setProperty('--mgebs-theme-y', y + 'px');
+            button.classList.add('is-switching');
+            var change = function () { applyTheme(next); };
+            if (document.startViewTransition) document.startViewTransition(change);
+            else change();
+            window.setTimeout(function () { button.classList.remove('is-switching'); }, 420);
+          });
+          document.body.appendChild(button);
+          applyTheme(currentTheme());
+        }
+        function bootMgebs() { applyBranding(); ensureThemeButton(); }
+        document.addEventListener('DOMContentLoaded', bootMgebs);
+        new MutationObserver(bootMgebs).observe(document.documentElement, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['src', 'alt', 'title', 'aria-label'] });
+      })();
     </script>
     <script type="module" crossorigin src="/_spa/assets/index-w64_zsxD.js"></script>
     <link rel="modulepreload" crossorigin href="/_spa/assets/rolldown-runtime-CMxvf4Kt.js">
