@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{Br as t,Vr as n}from"./chat-D3ilvURJ.js";var r,i=e((()=>{n(),r=e=>e===t.Acceptance||e===t.AcceptanceCheck}));export{r as n,i as t};

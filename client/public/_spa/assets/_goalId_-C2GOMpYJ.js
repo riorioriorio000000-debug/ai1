@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{T as n,i as r,v as i}from"../vendor/vendor-react-B9HSWrpN.js";import{n as a,t as o}from"./AgentGoals-Cc82CtwT.js";var s,c;e((()=>{r(),o(),s=t(n()),c=()=>{let{goalId:e}=i();return e?(0,s.jsx)(a,{goalId:e}):null}}))();export{c as default};

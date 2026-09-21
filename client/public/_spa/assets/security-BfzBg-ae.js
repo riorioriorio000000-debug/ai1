@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{T as n,i as r,l as i}from"../vendor/vendor-react-B9HSWrpN.js";var a,o;e((()=>{r(),a=t(n()),o=()=>(0,a.jsx)(i,{replace:!0,to:`/settings`})}))();export{o as default};

@@ -1,0 +1,1 @@
+import{n as e}from"../assets/rolldown-runtime-CMxvf4Kt.js";var t,n,r,i=e((()=>{t=1024**3,n=(e,n)=>e>=90||(n??0)>=t,r=e=>e.reduce((e,t)=>e+(t.hadRecentInput?0:t.value),0)}));export{n,r,i as t};

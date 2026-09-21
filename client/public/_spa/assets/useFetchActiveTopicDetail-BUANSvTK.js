@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{Mn as t,Wn as n,a as r,n as i}from"./chat-D3ilvURJ.js";var a,o=e((()=>{i(),t(),a=()=>{let[e,t,i]=r(e=>[e.activeTopicId,!!e.activeTopicId&&!!n.currentTopicData(e)&&!n.currentTopics(e)?.some(t=>t.id===e.activeTopicId),e.useFetchTopicDetail]);i(t?e:void 0)}}));export{a as n,o as t};

@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{Tp as t,iu as n,kp as r,nu as i,sC as a}from"./index-w64_zsxD.js";var o,s=e((()=>{i(),t(),o=()=>{let[e,t]=n(e=>[e.hasNewVersion,e.useCheckLatestVersion]),{enableCheckUpdates:i}=r(a);return t(i),e}}));export{o as n,s as t};

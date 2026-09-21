@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{r as t}from"./_virtual_lobe-ui-named__ContextMenuTrigger-DAznVU5g.js";var n=e((()=>{t()}));export{n as t};

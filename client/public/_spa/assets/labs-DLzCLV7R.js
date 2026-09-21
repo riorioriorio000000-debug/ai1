@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{T as n}from"../vendor/vendor-react-B9HSWrpN.js";import r,{t as i}from"./labs-C5W8q_Yx.js";var a,o;e((()=>{i(),a=t(n()),o=()=>(0,a.jsx)(r,{showSettingHeader:!1}),o.displayName=`WorkspaceLabsSetting`}))();export{o as default};

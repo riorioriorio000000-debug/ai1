@@ -1,0 +1,8 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{N as n,j as r}from"../vendor/vendor-data-runtime--g3k1Ms_.js";import{T as i}from"../vendor/vendor-react-B9HSWrpN.js";import{Eo as a,FD as o,ID as s,Qa as c,Ya as l,mo as u,uo as d}from"./index-w64_zsxD.js";import{n as f,t as p}from"./Markdown-DWQvr47S.js";import{i as m,t as h}from"./Skeleton-PcdZNeTb.js";import{i as g,t as _}from"./FormInput-D0nNIiYs.js";import{g as v,h as y,v as b}from"./(list)-DnVRWUZu.js";import{n as x,t as S}from"./default-BvcL-skC.js";var C,w,T,E,D;e((()=>{o(),f(),u(),r(),_(),h(),l(),b(),x(),C=t(i()),w={markdown:s(`acss-1omrw4v`,[`.acss-1omrw4v p{color:var(--ant-color-text-description)!important;}`],`
+    p {
+      color: var(--ant-color-text-description) !important;
+    }
+  `),tip:s(`acss-1ev8xc7`,[`.acss-1ev8xc7{font-size:12px;color:var(--ant-color-text-description);}`],`
+    font-size: 12px;
+    color: var(--ant-color-text-description);
+  `)},T=`github`,E=()=>{let{t:e}=n(`modelProvider`),t=c(d.isAiProviderConfigLoading(T));return{...a,apiKeyItems:[{children:t?(0,C.jsx)(m,{}):(0,C.jsx)(g,{autoComplete:`new-password`,placeholder:e(`github.personalAccessToken.placeholder`)}),desc:(0,C.jsx)(p,{className:w.markdown,fontSize:12,variant:`chat`,children:e(`github.personalAccessToken.desc`)}),label:e(`github.personalAccessToken.title`),name:[y,v]}]}},D=()=>(0,C.jsx)(S,{...E()})}))();export{D as default};

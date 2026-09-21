@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{r as t,s as n}from"../vendor/vendor-data-runtime--g3k1Ms_.js";import{n as r,t as i}from"./message-zv6PZlUr.js";var a,o=e((()=>{t(),i(),a=(e,t)=>{let{data:i,isLoading:a}=n(t&&e?[`toolResultPayload`,e]:null,([,e])=>r.getToolResultPayload(e),{revalidateOnFocus:!1});return{isLoading:t&&a,payload:i}}}));export{a as n,o as t};

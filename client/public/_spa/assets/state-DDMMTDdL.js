@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";var t,n=e((()=>{t=({data:e,isLoading:t=!1,isValidating:n=!1})=>{let r=(e?.length??0)>0,i=t||n&&!r;return{boundaryData:i?void 0:e,isEmpty:e?.length===0,isLoading:i}}}));export{n,t};

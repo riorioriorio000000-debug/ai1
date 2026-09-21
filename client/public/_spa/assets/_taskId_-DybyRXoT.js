@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{E as n,T as r,i,v as a}from"../vendor/vendor-react-B9HSWrpN.js";import{d as o,m as s}from"./TopicChatDrawer-_v3kDYDN.js";var c,l,u;e((()=>{c=t(n()),i(),o(),l=t(r()),u=(0,c.memo)(()=>{let{aid:e,taskId:t}=a();return t?(0,l.jsx)(s,{agentId:e,taskId:t}):null})}))();export{u as default};

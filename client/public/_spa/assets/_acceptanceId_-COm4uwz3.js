@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{T as n}from"../vendor/vendor-react-B9HSWrpN.js";import{J as r,q as i}from"./TopicChatDrawer-_v3kDYDN.js";import{L as a,f as o,t as s}from"./Acceptance-DM2lPt6n.js";function c(){return(0,l.jsx)(a,{TopicPanel:i,children:(0,l.jsx)(o,{})})}var l;e((()=>{s(),r(),l=t(n())}))();export{c as default};

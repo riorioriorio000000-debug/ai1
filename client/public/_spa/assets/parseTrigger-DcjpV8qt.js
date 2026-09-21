@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";function t(e){let t=new Set((Array.isArray(e)?e:[e]).flatMap(e=>e===`both`?[`hover`,`click`]:[e]));return{openOnClick:t.has(`click`),openOnHover:t.has(`hover`)}}var n=e((()=>{}));export{t as n,n as t};

@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import t,{t as n}from"./advanced-C2vNniN-.js";e((()=>{n()}))();export{t as default};

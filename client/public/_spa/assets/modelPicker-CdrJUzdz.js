@@ -1,0 +1,13 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{E as n,T as r}from"../vendor/vendor-react-B9HSWrpN.js";import{Qa as i,Ya as a,ch as o,fh as s,iC as c,lo as l,pF as u,uF as d,uo as f}from"./index-w64_zsxD.js";import{a as p,i as m,n as h}from"./ModelSelect-C7ru9e2p.js";var g,_,v,y,b=e((()=>{o(),g=t(c()),_=t(n()),a(),l(),v=(e,t)=>{let n=i(f.isInitAiProviderRuntimeState),r=i(e=>e.enabledAiProviders??[],g.default),a=i(e=>e.providerBindingAgentTypes,g.default),o=i(e=>e.enabledAiModels??[],g.default),c;if(!s(e))c={agentType:e??``,code:`agentUnsupported`};else if(!t?.providerId||!t.model?.trim())c={code:`configMissing`};else if(!r.some(({id:e})=>e===t.providerId))c={code:`providerUnavailable`,providerId:t.providerId};else if(!a[t.providerId]?.includes(e))c={agentType:e,code:`protocolMismatch`,providerId:t.providerId};else{let e=[t.model,t.smallFastModel].filter(e=>!!e).find(e=>!o.some(n=>n.providerId===t.providerId&&n.id===e&&n.type===`chat`));e&&(c={code:`modelUnavailable`,model:e,providerId:t.providerId})}return{error:c,isReady:n}},y=e=>{let t=i(e=>e.enabledAiProviders??[],g.default),n=i(e=>e.providerBindingAgentTypes,g.default),r=i(e=>e.enabledAiModels??[],g.default);return(0,_.useMemo)(()=>{let i=t.filter(({id:t})=>!!e&&n[t]?.includes(e)),a=new Set(i.map(({id:e})=>e)),o={};for(let e of r)e.type!==`chat`||!a.has(e.providerId)||(o[e.providerId]??=[],o[e.providerId].push({displayName:e.displayName,id:e.id,providerId:e.providerId}));return{modelsByProvider:o,providers:i.filter(({id:e})=>o[e]?.length).map(({id:e,logo:t,name:n,source:r})=>({id:e,logo:t,name:n,source:r}))}},[e,n,r,t])}})),x,S,C,w,T,E,D,O,k=e((()=>{d(),p(),x=t(r()),S={minWidth:200,width:`initial`},C={maxWidth:160,minWidth:0,width:`auto`},w=(e,t)=>t?e?.[t]??[]:[],T=u(({css:e})=>({compactLabel:e`
+    overflow: hidden;
+
+    min-width: 0;
+    max-width: 100%;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  `,picker:e`
+    .${m} {
+      display: none;
+    }
+  `})),E=(e,t)=>t.find(t=>t.id===e&&t.providerId===`lobehub`)??t.find(t=>t.id===e),D=e=>{let t=String(e.value??``),n=t.includes(`/`)?t.slice(t.indexOf(`/`)+1):t;return e.title||n},O=(e,t)=>e.map(({model:e})=>{let n=E(e,t),r=n?.displayName??e;return{label:(0,x.jsx)(h,{displayName:n?.displayName,id:e,releasedAt:n?.releasedAt,showInfoTag:!1}),title:r,value:e}})}));export{k as a,b as c,D as i,y as l,S as n,T as o,O as r,w as s,C as t,v as u};

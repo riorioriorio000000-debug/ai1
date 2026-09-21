@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{eh as t,th as n}from"./index-w64_zsxD.js";var r;e((()=>{n(),r={runCommand:e=>t().auv.runCommand(e)}}))();export{r as electronAuvService};

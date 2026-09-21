@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";var t,n,r,i,a,o,s=e((()=>{t=new Map,n=new Map,r={canGoBack:!1,canGoForward:!1},i=e=>t.get(e),a=()=>[...t.keys()],o=e=>n.get(e)?.getSnapshot()??r}));export{s as i,i as n,a as r,o as t};

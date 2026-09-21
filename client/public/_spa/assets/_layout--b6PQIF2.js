@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{T as n,i as r,u as i}from"../vendor/vendor-react-B9HSWrpN.js";import{a,t as o}from"./useHotkeys-5rzSxldT.js";var s,c=e((()=>{o(),s=()=>(a(),null)})),l,u,d=e((()=>{r(),c(),l=t(n()),u=()=>(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(i,{}),(0,l.jsx)(s,{})]})}));e((()=>{d()}))();export{u as default};

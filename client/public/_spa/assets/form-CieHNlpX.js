@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";var t,n=e((()=>{t={"form.reset":`Reset`,"form.submit":`Submit`,"form.unsavedChanges":`Unsaved changes`,"form.unsavedWarning":`You have unsaved changes. Are you sure you want to leave?`}}));export{n,t};

@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{E as n,T as r,a as i,i as a}from"../vendor/vendor-react-B9HSWrpN.js";var o,s,c,l=e((()=>{o=t(n()),a(),s=t(r()),c=(0,o.memo)(({href:e,to:t,...n})=>{let r=e||t||`/`;return(0,s.jsx)(i,{...n,to:r})}),c.displayName=`Link`}));export{l as n,c as t};

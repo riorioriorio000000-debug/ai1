@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";var t,n=e((()=>{t=async e=>{try{await navigator.clipboard.writeText(e)}catch{let t=document.createElement(`textarea`);t.value=e,document.body.append(t),t.focus(),t.select(),document.execCommand(`copy`),t.remove()}}}));export{n,t};

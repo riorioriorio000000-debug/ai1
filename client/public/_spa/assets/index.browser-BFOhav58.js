@@ -1,0 +1,1 @@
+import{n as e,r as t}from"./rolldown-runtime-CMxvf4Kt.js";var n=t({ssrfSafeFetch:()=>r}),r,i=e((()=>{r=async(e,t,n)=>fetch(e,t)}));export{i as n,r,n as t};

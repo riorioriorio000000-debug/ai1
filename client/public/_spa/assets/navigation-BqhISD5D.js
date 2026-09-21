@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{ht as t,mt as n}from"./index-w64_zsxD.js";var r,i,a=e((()=>{n(),r=(e,n)=>`/agent/${e}/docs/${t(n)}`,i=e=>`/agent/${e}/docs`}));export{i as n,a as r,r as t};

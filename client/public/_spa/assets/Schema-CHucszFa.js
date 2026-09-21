@@ -1,0 +1,14 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{N as n,j as r}from"../vendor/vendor-data-runtime--g3k1Ms_.js";import{E as i,T as a}from"../vendor/vendor-react-B9HSWrpN.js";import{Kt as o,qt as s}from"../vendor/vendor-ui-core-BmtybT1r.js";import{Bt as c,FD as l,ID as u,hF as d,uF as f}from"./index-w64_zsxD.js";import{n as p,t as m}from"./Tag-C95BKTI7.js";import{n as h,t as g}from"./Tabs-DH_wa3T6.js";import{t as _}from"./Skeleton-PcdZNeTb.js";import{i as v,n as y,r as b,t as x}from"./ContentViewer-BM4fFGs3.js";import{_ as S,g as C}from"./SkillStore-KhQLHwJ4.js";import{C as w,c as T,l as E,s as D,u as O,w as k}from"./MCPInstallProgress-XceYNOpx.js";import{n as A,t as j}from"./Title-DsiwuxHF.js";var M,N,P,F;e((()=>{l(),s(),h(),p(),f(),M=t(i()),r(),_(),y(),v(),k(),T(),O(),A(),C(),N=t(a()),P={divider:u(`acss-5eqtx4`,[`.acss-5eqtx4{flex-shrink:0;width:1px;background:var(--ant-color-border-secondary);}`],`
+    flex-shrink: 0;
+    width: 1px;
+    background: var(--ant-color-border-secondary);
+  `),left:u(`acss-1x7a1mg`,[`.acss-1x7a1mg{overflow-y:auto;flex-shrink:0;width:240px;padding:8px;}`],`
+    overflow-y: auto;
+    flex-shrink: 0;
+    width: 240px;
+    padding: 8px;
+  `),right:u(`acss-euqncz`,[`.acss-euqncz{container-type:size;overflow:auto;flex:1;}`],`
+    container-type: size;
+    overflow: auto;
+    flex: 1;
+  `)},F=(0,M.memo)(()=>{let{t:e}=n(`discover`),{tools:t,toolsLoading:r,skillContent:i}=S(),[a,s]=(0,M.useState)([]),[l,u]=(0,M.useState)(E.Docs),[f,p]=(0,M.useState)(`SKILL.md`),h=t.length,_=(0,M.useMemo)(()=>i?{content:i,name:``}:void 0,[i]);return r?(0,N.jsx)(o,{gap:16,children:(0,N.jsx)(c,{rows:4})}):(0,N.jsxs)(w,{config:{tools:t,toolsCount:h},children:[h>0&&(0,N.jsxs)(o,{gap:8,children:[(0,N.jsxs)(o,{horizontal:!0,align:`center`,gap:12,justify:`space-between`,children:[(0,N.jsx)(j,{level:3,tag:(0,N.jsx)(m,{children:h}),children:e(`mcp.details.schema.tools.title`)}),(0,N.jsx)(g,{activeKey:l,items:[{key:E.Docs,label:e(`mcp.details.schema.mode.docs`)},{key:E.JSON,label:`JSON`}],onChange:e=>u(e)})]}),(0,N.jsx)(`p`,{style:{marginBottom:24},children:e(`mcp.details.schema.tools.desc`)}),(0,N.jsx)(D,{activeKey:a,mode:l,setActiveKey:s})]}),i&&(0,N.jsx)(o,{gap:8,children:(0,N.jsxs)(o,{horizontal:!0,style:{border:`1px solid ${d.colorBorderSecondary}`,borderRadius:8,height:400,overflow:`hidden`},children:[(0,N.jsx)(`div`,{className:P.left,children:(0,N.jsx)(b,{resourceTree:[],selectedFile:f,onSelectFile:p})}),(0,N.jsx)(`div`,{className:P.divider}),(0,N.jsx)(`div`,{className:P.right,children:(0,N.jsx)(x,{contentMap:{},selectedFile:f,skillDetail:_})},f)]})})]})})}))();export{F as default};

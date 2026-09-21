@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";var t,n=e((()=>{t={"emojiPicker.delete":`Delete`,"emojiPicker.draggerDesc":`Click or Drag image to this area to upload`,"emojiPicker.emoji":`Emoji`,"emojiPicker.fileTypeError":`You can only upload image file!`,"emojiPicker.upload":`Upload`,"emojiPicker.uploadBtn":`Crop and Upload`}}));export{n,t};

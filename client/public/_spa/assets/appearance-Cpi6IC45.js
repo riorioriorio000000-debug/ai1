@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{T as n}from"../vendor/vendor-react-B9HSWrpN.js";import r,{t as i}from"./appearance-fB9IBxFs.js";var a,o;e((()=>{i(),a=t(n()),o=()=>(0,a.jsx)(r,{showSettingHeader:!1}),o.displayName=`WorkspaceAppearanceSetting`}))();export{o as default};

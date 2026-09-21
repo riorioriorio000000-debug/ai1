@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{T as n}from"../vendor/vendor-react-B9HSWrpN.js";import{ToolSettings as r,t as i}from"./skill-Cxobg4l6.js";var a,o;e((()=>{i(),a=t(n()),o=()=>(0,a.jsx)(r,{viewMode:`connector`}),o.displayName=`WorkspaceConnectorSetting`}))();export{o as default};

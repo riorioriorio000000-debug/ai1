@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{V as t,z as n}from"../vendor/vendor-data-runtime--g3k1Ms_.js";import{Yn as r}from"../vendor/vendor-ui-core-BmtybT1r.js";import{MA as i}from"./index-w64_zsxD.js";var a;e((()=>{i(),n(),a=e=>{r.error({id:`remote-server-network-error-${e}`,title:t(`response.${e}`,{ns:`error`})})}}))();export{a as remoteServerErrorToast};

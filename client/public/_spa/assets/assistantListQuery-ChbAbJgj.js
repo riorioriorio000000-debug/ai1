@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{B_ as t,av as n}from"./index-w64_zsxD.js";var r,i=e((()=>{t(),r=e=>({category:e.category,includeAgentGroup:!0,includeCategoryCounts:!!e.q?.trim(),order:e.order,page:e.page,pageSize:21,q:e.q,sort:e.sort??n.Recommended,source:e.source})}));export{i as n,r as t};

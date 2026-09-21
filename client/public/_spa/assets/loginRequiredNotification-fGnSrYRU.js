@@ -1,0 +1,1 @@
+import{n as e,r as t}from"./rolldown-runtime-CMxvf4Kt.js";import{Kp as n,qp as r}from"./index-w64_zsxD.js";var i=t({loginRequired:()=>a}),a,o=e((()=>{r(),a={redirect:({reason:e}={})=>{n().openLogin(e)}}}));export{a as n,i as r,o as t};

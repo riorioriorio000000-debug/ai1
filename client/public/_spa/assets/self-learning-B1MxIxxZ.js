@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{E as n,T as r}from"../vendor/vendor-react-B9HSWrpN.js";import{n as i,t as a}from"./SelfLearning-DS3KpPZN.js";var o,s,c;e((()=>{o=t(n()),i(),s=t(r()),c=(0,o.memo)(()=>(0,s.jsx)(a,{}))}))();export{c as default};

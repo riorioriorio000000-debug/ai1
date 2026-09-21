@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{Fr as t}from"./app-const-BpgKVRXh.js";import{Qm as n}from"./index-w64_zsxD.js";var r,i,a=e((()=>{t(),n(),r=new Set([`http:`,`https:`]),i=e=>{let t;try{t=new URL(e)}catch{return}r.has(t.protocol)&&window.open(t.href,`_blank`,`noopener,noreferrer`)}}));export{i as n,a as t};

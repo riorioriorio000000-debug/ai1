@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{TA as t,wA as n}from"./index-w64_zsxD.js";var r,i=e((()=>{n(),r=(e,n)=>t(n===`organization`?`/community/org`:`/community/user`,e)}));export{r as n,i as t};

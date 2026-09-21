@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{V as t,z as n}from"../vendor/vendor-data-runtime--g3k1Ms_.js";import{P_ as r,dg as i}from"./index-w64_zsxD.js";var a;e((()=>{i(),n(),a=e=>{let n=e?.errorType;return r(n)?t(`response.${n}`,{ns:`error`}):t(`response.UnreadableServerResponse`,{ns:`error`})}}))();export{a as unreadableResponseMessage};

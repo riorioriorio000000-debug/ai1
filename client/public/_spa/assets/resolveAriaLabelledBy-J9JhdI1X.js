@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";function t(e,t,n=Object.is){let{length:r}=e;if(r!==t.length)return!1;for(let i=0;i<r;i+=1)if(!n(e[i],t[i]))return!1;return!0}var n=e((()=>{}));function r(e){return e==null?void 0:`${e}-label`}function i(e,t){return e??t}var a=e((()=>{}));export{n as a,t as i,a as n,i as r,r as t};

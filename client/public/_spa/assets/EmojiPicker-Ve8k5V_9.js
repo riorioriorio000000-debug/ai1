@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{n as t,t as n}from"./EmojiPicker-DdksKn83.js";e((()=>{t()}))();export{n as default};

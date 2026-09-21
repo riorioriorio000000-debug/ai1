@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";import{a as t,n}from"./chat-D3ilvURJ.js";var r,i=e((()=>{n(),r=e=>{let[n]=t(e=>[e.useFetchThreads]);n(!0,e)}}));export{r as n,i as t};

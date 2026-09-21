@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";var t,n=e((()=>{t={"messageModal.cancel":`Cancel`,"messageModal.confirm":`Confirm`,"messageModal.edit":`Edit`}}));export{t as n,n as t};

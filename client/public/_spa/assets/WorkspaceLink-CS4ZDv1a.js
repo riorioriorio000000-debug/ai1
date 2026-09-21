@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{T as n,a as r,i}from"../vendor/vendor-react-B9HSWrpN.js";import{Af as a,Ff as o,If as s,jf as c}from"./index-w64_zsxD.js";var l,u,d=e((()=>{i(),o(),c(),l=t(n()),u=({ref:e,to:t,escape:n,...i})=>(0,l.jsx)(r,{ref:e,to:a(t,s(),{escape:n}),...i}),u.displayName=`WorkspaceLink`}));export{d as n,u as t};

@@ -1,0 +1,1 @@
+import{n as e,o as t}from"./rolldown-runtime-CMxvf4Kt.js";import{T as n}from"../vendor/vendor-react-B9HSWrpN.js";import{n as r,t as i}from"./Labels-CSCTgVOK.js";var a,o;e((()=>{r(),a=t(n()),o=()=>(0,a.jsx)(i,{}),o.displayName=`LabelsSetting`}))();export{o as default};

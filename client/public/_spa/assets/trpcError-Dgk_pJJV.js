@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-CMxvf4Kt.js";var t,n=e((()=>{t=(e,t)=>typeof e!=`object`||!e?!1:e.data?.code===t}));export{t as n,n as t};
