@@ -1,6 +1,4 @@
-import { AIChatBox, type Message } from "@/components/AIChatBox";
-import { trpc } from "@/lib/trpc";
-import { ArrowUpRight, ChevronDown, Download, Github, Menu, MessageCircle, Moon, Sparkles, Sun, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Download, Github, Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 
@@ -62,27 +60,7 @@ function ProductArt({ type }: { type: string }) {
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [chatOpen, setChatOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]);
   const { theme, toggleTheme } = useTheme();
-  const chatMutation = trpc.ai.chat.useMutation({
-    onSuccess: (content) => setMessages((current) => [...current, { role: "assistant", content }]),
-    onError: () => setMessages((current) => [...current, { role: "assistant", content: "I couldn’t connect right now. Please try again." }]),
-  });
-
-  const openChat = () => {
-    setMenuOpen(false);
-    setChatOpen(true);
-  };
-
-  const sendMessage = (content: string) => {
-    const nextMessages = [...messages, { role: "user" as const, content }];
-    setMessages(nextMessages);
-    const apiMessages = nextMessages.flatMap(({ role, content: message }) =>
-      role === "system" ? [] : [{ role, content: message }]
-    );
-    chatMutation.mutate({ messages: apiMessages });
-  };
 
   useEffect(() => {
     const elements = document.querySelectorAll<HTMLElement>(".reveal-on-scroll");
@@ -108,17 +86,11 @@ export default function Home() {
           {navItems.map((item) => <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>{item}<ChevronDown size={13} /></a>)}
           <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
           <a href="https://github.com/lobehub/lobehub" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}><Github size={14} />GitHub</a>
-          <a className="header-cta" href="#chat" onClick={(event) => { event.preventDefault(); openChat(); }}>Get started</a>
+          <a className="header-cta" href="https://app.lobehub.com/?utm_source=landing&utm_content=hero_get_started&utm_medium=home_hero">Get started</a>
           <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}>{theme === "light" ? <Moon size={15} /> : <Sun size={15} />}</button>
         </nav>
         <button className="menu-toggle" aria-label="Menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
       </header>
-
-      <button className="chat-launcher" type="button" onClick={() => setChatOpen(true)} aria-label="Open Lobe AI"><MessageCircle size={17} /><span>Lobe AI</span><Sparkles size={14} /></button>
-      {chatOpen && <aside className="chat-panel" id="chat" aria-label="Lobe AI chat">
-        <div className="chat-panel-header"><div className="chat-agent"><span className="chat-agent-mark"><Sparkles size={15} /></span><div><strong>Lobe AI</strong><small>Chief Agent Operator</small></div></div><button className="chat-close" type="button" onClick={() => setChatOpen(false)} aria-label="Close Lobe AI"><X size={18} /></button></div>
-        <AIChatBox messages={messages} onSendMessage={sendMessage} isLoading={chatMutation.isPending} placeholder="Ask Lobe AI anything..." emptyStateMessage="Start a conversation with Lobe AI" suggestedPrompts={["How do I build an AI team?", "Help me organize my next project", "What can LobeHub do?"]} height="calc(100% - 67px)" className="lobe-chat-box" />
-      </aside>}
 
       <main id="top">
         <section className="hero">
@@ -126,9 +98,9 @@ export default function Home() {
           <div className="hero-copy reveal">
             <h1>Your Chief Agent <em>Operator</em></h1>
             <p>LobeHub organizes your agents into 7×24 operation. It hires, schedules, reports on your entire AI team. You stay in charge — without staying online.</p>
-            <div className="hero-actions"><a className="button dark" href="#chat" onClick={(event) => { event.preventDefault(); openChat(); }}>Get started for free <ArrowUpRight size={16} /></a><a className="button light" href="/downloads">Download <Download size={16} /></a></div>
+            <div className="hero-actions"><a className="button dark" href="https://app.lobehub.com/?utm_source=landing&utm_content=hero_get_started&utm_medium=home_hero">Get started for free <ArrowUpRight size={16} /></a><a className="button light" href="/downloads">Download <Download size={16} /></a></div>
           </div>
-          <div className="hero-product reveal delay-one"><img src="https://lobehub.com/img/hub/images/home/overview-cao-light.webp" alt="LobeHub Overview" /></div>
+          <div className="hero-product reveal delay-one"><img src="/manus-storage/overview-cao-light_5a418103.webp" alt="LobeHub Overview" /></div>
         </section>
 
         <section className="trust-strip"><span>Trusted by teams worldwide</span><div className="trust-dots"><i /><i /><i /><i /><i /></div></section>
@@ -143,7 +115,7 @@ export default function Home() {
 
         <section className="market-section reveal-on-scroll" id="community"><div className="market-copy"><span className="section-kicker">Community</span><h2>Everything your agents need to get work done.</h2><p>Connect your agents to the skills you use every day with a library of tools and MCP-compatible plugins.</p><a className="text-link" href="https://lobehub.com/market">Skills Marketplace <ArrowUpRight size={16} /></a></div><div className="market-card"><div className="market-header"><span>Skills Marketplace</span><span className="live-dot">● Live</span></div><div className="market-search">⌕&nbsp; Search skills</div><div className="skill-grid"><span>Research</span><span>Writing</span><span>Browser</span><span>Data</span><span>Design</span><span>Code</span></div><strong>100,243+ MCP Servers</strong></div></section>
 
-        <section className="final-cta reveal-on-scroll" id="resources"><div className="final-orb" /><span className="section-kicker">LobeHub</span><h2>You stay in charge —<br /><em>without staying online.</em></h2><a className="button dark" href="#chat" onClick={(event) => { event.preventDefault(); openChat(); }}>Get started for free <ArrowUpRight size={16} /></a><a className="button light" href="/downloads">Download <Download size={16} /></a></section>
+        <section className="final-cta reveal-on-scroll" id="resources"><div className="final-orb" /><span className="section-kicker">LobeHub</span><h2>You stay in charge —<br /><em>without staying online.</em></h2><a className="button dark" href="https://app.lobehub.com/?utm_source=landing&utm_content=hero_get_started&utm_medium=home_hero">Get started for free <ArrowUpRight size={16} /></a><a className="button light" href="/downloads">Download <Download size={16} /></a></section>
       </main>
 
       <footer className="footer"><a className="brand" href="#top"><span className="brand-mark"><span>✦</span></span><span>LobeHub</span></a><div className="footer-links"><a href="https://lobehub.com/docs/usage/start">Documents</a><a href="https://lobehub.com/blog">Blog</a><a href="https://github.com/lobehub/lobehub/issues">Feedback</a><a href="https://discord.gg/AYFPHvv2jT">Join Discord</a></div><span className="footer-note">Open source AI Agent playground</span></footer>
