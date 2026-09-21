@@ -1,5 +1,6 @@
-import { ArrowDown, ArrowUpRight, ChevronDown, Download, Github, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { ArrowUpRight, ChevronDown, Download, Github, Menu, Moon, Sun, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const navItems = ["Products", "Community", "Resources"];
 
@@ -59,6 +60,21 @@ function ProductArt({ type }: { type: string }) {
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    const elements = document.querySelectorAll<HTMLElement>(".reveal-on-scroll");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="site-shell">
@@ -71,6 +87,7 @@ export default function Home() {
           <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
           <a href="https://github.com/lobehub/lobehub" target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}><Github size={14} />GitHub</a>
           <a className="header-cta" href="https://app.lobehub.com/?utm_source=landing&utm_content=hero_get_started&utm_medium=home_hero">Get started</a>
+          <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}>{theme === "light" ? <Moon size={15} /> : <Sun size={15} />}</button>
         </nav>
         <button className="menu-toggle" aria-label="Menu" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X /> : <Menu />}</button>
       </header>
@@ -91,19 +108,17 @@ export default function Home() {
         <section className="intro-section" id="products"><span className="section-kicker">One space for your AI team</span><h2>From one-off tasks to <span>entire operations.</span></h2><p>Today’s agents are one-off, task-driven tools. LobeHub changes everything.</p></section>
 
         <div className="feature-sections">
-          {sections.map((section, index) => <section className={`feature-row ${index % 2 ? "reverse" : ""}`} id={section.id} key={section.id}>
+          {sections.map((section, index) => <section className={`feature-row reveal-on-scroll ${index % 2 ? "reverse" : ""}`} id={section.id} key={section.id}>
             <div className="feature-copy"><span className="section-kicker">{section.eyebrow}</span><h2>{section.title}</h2><p>{section.body}</p><div className="feature-list">{section.items.map(item => <span key={item}><b>✦</b>{item}</span>)}</div></div><ProductArt type={section.art} />
           </section>)}
         </div>
 
-        <section className="market-section" id="community"><div className="market-copy"><span className="section-kicker">Community</span><h2>Everything your agents need to get work done.</h2><p>Connect your agents to the skills you use every day with a library of tools and MCP-compatible plugins.</p><a className="text-link" href="https://lobehub.com/market">Skills Marketplace <ArrowUpRight size={16} /></a></div><div className="market-card"><div className="market-header"><span>Skills Marketplace</span><span className="live-dot">● Live</span></div><div className="market-search">⌕&nbsp; Search skills</div><div className="skill-grid"><span>Research</span><span>Writing</span><span>Browser</span><span>Data</span><span>Design</span><span>Code</span></div><strong>100,243+ MCP Servers</strong></div></section>
+        <section className="market-section reveal-on-scroll" id="community"><div className="market-copy"><span className="section-kicker">Community</span><h2>Everything your agents need to get work done.</h2><p>Connect your agents to the skills you use every day with a library of tools and MCP-compatible plugins.</p><a className="text-link" href="https://lobehub.com/market">Skills Marketplace <ArrowUpRight size={16} /></a></div><div className="market-card"><div className="market-header"><span>Skills Marketplace</span><span className="live-dot">● Live</span></div><div className="market-search">⌕&nbsp; Search skills</div><div className="skill-grid"><span>Research</span><span>Writing</span><span>Browser</span><span>Data</span><span>Design</span><span>Code</span></div><strong>100,243+ MCP Servers</strong></div></section>
 
-        <section className="final-cta" id="resources"><div className="final-orb" /><span className="section-kicker">LobeHub</span><h2>You stay in charge —<br /><em>without staying online.</em></h2><a className="button dark" href="https://app.lobehub.com/?utm_source=landing&utm_content=hero_get_started&utm_medium=home_hero">Get started for free <ArrowUpRight size={16} /></a><a className="button light" href="/downloads">Download <Download size={16} /></a></section>
+        <section className="final-cta reveal-on-scroll" id="resources"><div className="final-orb" /><span className="section-kicker">LobeHub</span><h2>You stay in charge —<br /><em>without staying online.</em></h2><a className="button dark" href="https://app.lobehub.com/?utm_source=landing&utm_content=hero_get_started&utm_medium=home_hero">Get started for free <ArrowUpRight size={16} /></a><a className="button light" href="/downloads">Download <Download size={16} /></a></section>
       </main>
 
       <footer className="footer"><a className="brand" href="#top"><span className="brand-mark"><span>✦</span></span><span>LobeHub</span></a><div className="footer-links"><a href="https://lobehub.com/docs/usage/start">Documents</a><a href="https://lobehub.com/blog">Blog</a><a href="https://github.com/lobehub/lobehub/issues">Feedback</a><a href="https://discord.gg/AYFPHvv2jT">Join Discord</a></div><span className="footer-note">Open source AI Agent playground</span></footer>
     </div>
   );
 }
-
-void ArrowDown;
